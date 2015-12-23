@@ -1,0 +1,10 @@
+fixtures:
+  repositories:
+    stdlib:
+      repo: "https://github.com/Adaptavist/puppet-stdlib"
+    rsync:
+      repo: "https://github.com/Adaptavist/puppet-rsync"
+    xinetd: 
+      repo: "https://github.com/Adaptavist/puppet-xinetd"
+  symlinks:
+    'rsync_config': "#{source_dir}"
