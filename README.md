@@ -1,4 +1,5 @@
 # rsync_config Module
+[![Build Status](https://travis-ci.org/Adaptavist/puppet-rsync_config.svg?branch=master)](https://travis-ci.org/Adaptavist/puppet-rsync_config)
 
 ## Overview
 
@@ -6,39 +7,39 @@ The **rsync_config** module installs and configures an rsync server including mo
 
 ## Configuration
 
-####`use_xinetd`
+##### `use_xinetd`
 
 Flag to determine if the rsync server should be controlled by xinetd.  **Default: false for Ubuntu and true for RedHAt ** (this option can be overwritten by a host level entry)
 
-#####`address`
+##### `address`
 
 The bind address of the daemon, this value is written into /etc/rsyncd.conf, it can be overwritten by setting "--address=x.x.x.x" as an argument to the process itself (can be set on Debian/Ubuntu systems via ***rsync_opts***.  **Default: 0.0.0.0**
 
-#####`merge_modules`
+##### `merge_modules`
 
 Flag to determine if global and host level modules should be merged together.  If set to false host level modules are used and globals ignored, if however there are no hosts level modules then the globals are used. **Default: true** (this option can be overwritten by a host level entry)
 
-#####`modules`
+##### `modules`
 
 A hash of rsync modules. **Default: empty hash** (this option can be overwritte/added to by a host level entry)
 
-#####`rsync_fragments`
+##### `rsync_fragments`
 
 The location of the folder used to contain module fragments. **Default: /etc/rsync.d**
 
-#####`conf_file`
+##### `conf_file`
 
 The location of the rsync daemon configuration file. **Default: /etc/rsyncd.conf**
 
-#####`rsync_opts`
+##### `rsync_opts`
 
 The value to place in the /etc/default/rsync file on Debian/Ubuntu systems for the RSYNC_OPTS option.  **Default: undef** (this option can be overwritten by a host level entry)
 
-#####`flush_config`
+##### `flush_config`
 
 Flag to determine if the existing module fragments and rsync configuration file should be deleted, this ensures that only the configuration witin the hiera configuration is present on the system.  **Default: true** (this option can be overwritten by a host level entry)
 
-##Hiera Examples:
+## Hiera Examples:
 
 * Global Settings
 
