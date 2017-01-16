@@ -1,5 +1,5 @@
 name 'adaptavist/rsync_config'
-version '0.1.8'
+version '1.0.0'
 source 'https://github.com/Adaptavist/puppet-rsync_config.git'
 author 'mhope'
 summary 'rsync_config Module' 
