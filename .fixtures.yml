@@ -6,5 +6,7 @@ fixtures:
       repo: "https://github.com/Adaptavist/puppet-rsync"
     xinetd: 
       repo: "https://github.com/Adaptavist/puppet-xinetd"
+    selinux_core:
+      repo: "https://github.com/Adaptavist/puppetlabs-selinux_core"
   symlinks:
     'rsync_config': "#{source_dir}"
